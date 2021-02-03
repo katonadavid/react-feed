@@ -1,0 +1,49 @@
+.post-frame {
+    margin-bottom: 2rem;
+}
+
+.post {
+    padding: 1rem;
+    background-color: #f6f8ea;
+    color: black;
+    box-shadow: 0px 1px 7px 0px #00000088;
+    position: relative;
+    z-index: 50;
+}
+
+.comment-frame {
+    overflow: hidden;
+    padding-bottom: 1rem;
+}
+
+.comments {
+    /* width: 90%; */
+    background-color: #EEE;
+    position: relative;
+    left: 1%;
+    padding: 1rem;
+    font-size: 0.8rem;
+    box-shadow: 0px 1px 9px -2px #00000088;
+}
+
+.comment {
+    padding: 0.4rem;
+    border-bottom: 2px solid #ccc;
+}
+
+.comment:nth-child(even) {
+    background-color: #e2e2e2 !important;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title *:first-child {
+    margin-right: 1rem;
+}
+
+.body {
+    line-height: 160%;
+}
