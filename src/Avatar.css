@@ -6,7 +6,7 @@
 
 .avatar-frame img {
     height: 100%;
-    width: auto;
+    width: 100%;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0px 1px 7px 0px #00000088;

@@ -26,13 +26,12 @@ function Post(props) {
                         })
                     }
                     <div>
-                        <CommentInput />
+                        <CommentInput postID={ props.id } onSave={ props.addComment } />
                     </div>
                 </div>
             </div>
         </div>
     );
-
 }
 
 export default Post;
