@@ -66,11 +66,18 @@ class Feed extends React.Component {
   }
 
   saveComment = ( postID, comment ) => {
+
     const newPost = this.state.posts.filter( ( post ) => {
       return post.id === postID;
     })[0];
 
-    const lastCommentID = newPost.comments.reduce( ( latestComment, comment ) => comment.id > latestComment.id ? comment : latestComment ).id;
+    const lastComment = newPost.comments.reduce( ( latestComment, comment ) => {
+      
+       return ( !isNaN( latestComment.id ) && comment.id < latestComment.id) ? latestComment : comment;
+
+      }, {} );
+
+    const lastCommentID = lastComment.id ? lastComment.id : 0;
 
     newPost.comments.push({
       id: lastCommentID + 1,
@@ -78,6 +85,7 @@ class Feed extends React.Component {
     });
 
     this.setState({
+      // Replacing the post
       posts: this.state.posts.map( post => post.id === postID ? newPost : post )
     })
   }
